@@ -1,0 +1,17 @@
+{
+  "name": "Chat",
+  "version": "0.0.2",
+  "manifest_version": 1,
+  "author": "CWS",
+  "icon": "/OBChat.png",
+    "background_url": "/",
+  "description": "OB Chat",
+    "action": {
+    "title": "Chat",
+    "icon": "/OBChat_ab.png",
+    "popover": "/pop.html",
+	"height": 240,
+    "width": 220
+
+  }
+}
