@@ -110,6 +110,14 @@ async function sendmsg()
 	if (myid==mydisplay[getPluginId("obcreceiver")])
 	{
 		OBR.notification.show(mydisplay[getPluginId("obcsender")] +": "+ mydisplay[getPluginId("obctext")],"ERROR")
+		
+		await OBR.room.setMetadata({
+		[getPluginId("obcsender")]:[],
+		[getPluginId("obcreceiver")]:[],
+		[getPluginId("obctext")]:[]
+	})
+		
+		
 	}
 	
 	if (myid==mydisplay[getPluginId("obcsender")])
@@ -117,11 +125,7 @@ async function sendmsg()
 		OBR.notification.show("Message Sent to " + mydisplay[getPluginId("obcreceiver")],"SUCCESS")
 	}
 	
-	await OBR.room.setMetadata({
-		[getPluginId("obcsender")]:[],
-		[getPluginId("obcreceiver")]:[],
-		[getPluginId("obctext")]:[]
-	})
+
 	
 	
 }
